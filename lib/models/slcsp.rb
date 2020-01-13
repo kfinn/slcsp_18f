@@ -2,6 +2,8 @@ require 'environment'
 require 'csv'
 require 'concerns/csv_model'
 require 'active_model'
+require 'active_support/all'
+require 'models/plan'
 
 class SLCSP
   include ActiveModel::Model
@@ -10,8 +12,8 @@ class SLCSP
 
   attr_accessor :zipcode, :rate
 
-  def rate=(rate)
-    @rate = rate.to_f
+  def rate
+    @rate ||= Plan.with_zipcode(zipcode).second.rate
   end
 
   def to_csv_row
