@@ -1,15 +1,20 @@
 require 'environment'
+require 'csv'
 require 'concerns/csv_model'
 require 'active_model'
 
-class Plan
+class SLCSP
   include ActiveModel::Model
   include CSVModel
-  csv_path Environment.instance.plans_path
+  csv_path Environment.instance.slcsp_path
 
-  attr_accessor :plan_id, :state, :metal_level, :rate, :rate_area
+  attr_accessor :zipcode, :rate
 
   def rate=(rate)
     @rate = rate.to_f
+  end
+
+  def to_csv_row
+    "#{zipcode},#{rate}"
   end
 end
