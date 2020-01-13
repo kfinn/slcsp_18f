@@ -1,0 +1,27 @@
+# Dependencies
+
+## Ruby 2.7.0
+
+This project was tested against Ruby v2.7.0, managed by `rbenv`. The [`rbenv` website ](https://github.com/rbenv/rbenv) has great installation instructions. With `rbenv` and `ruby-build` installed, install Ruby 2.7.0 by running `rbenv install` within this project's directory.
+
+The project doesn't make use of any new 2.7.0 features, so it's likely it will work just fine with a somewhat older version of Ruby.
+
+## Bundler
+
+This project manages dependencies via bundler, which can be installed via  `gem install bundler`.
+
+Install this project's bundler dependencies via `bundle install`
+
+Once the dependencies have been installed, all app commands should be run via `bundle exec`, e.g. `bundle exec ruby cli.rb`
+
+# Running the project
+
+To run the project and see the results of the interview prompt, just execute `ruby cli.rb`
+
+## Locating the slcsp CSV files
+
+The app locates the slcsp CSV files by searching in `~/slcsp`. This can be overridden by specifying a `SLCSP_PATH` variable in the environment, e.g.: `SLCSP_PATH=./slcsp_csvs bundle exec ruby cli.rb`
+
+# Running the tests
+
+Run the project's tests via rspec: `bundle exec rspec`
