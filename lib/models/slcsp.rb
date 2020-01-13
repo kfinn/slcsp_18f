@@ -18,8 +18,8 @@ class SLCSP
 
   def computed_rate
     unless instance_variable_defined?(:@computed_rate)
-      second_lowest_cost_silver_plan = Plan.with_zipcode(zipcode).silver.sorted_by_rate.second
-      @computed_rate = second_lowest_cost_silver_plan.present? ? second_lowest_cost_silver_plan.rate : nil
+      plan = Plan.with_zipcode(zipcode).silver.sorted_by_rate.second
+      @computed_rate = plan.present? ? plan.rate : nil
     end
     @computed_rate
   end
