@@ -1,7 +1,7 @@
-require 'environment'
-require 'csv'
-require 'concerns/csv_model'
 require 'active_model'
+require 'concerns/csv_model'
+require 'csv'
+require 'environment'
 
 class Zip
   include ActiveModel::Model

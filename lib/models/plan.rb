@@ -1,7 +1,7 @@
-require 'environment'
-require 'concerns/csv_model'
 require 'active_model'
 require 'active_support/all'
+require 'concerns/csv_model'
+require 'environment'
 require 'models/zip'
 
 class Plan

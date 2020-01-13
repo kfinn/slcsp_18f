@@ -1,5 +1,5 @@
-require 'csv'
 require 'active_support/concern'
+require 'csv'
 
 module CSVModel
   extend ActiveSupport::Concern

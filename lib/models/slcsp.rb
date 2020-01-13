@@ -1,8 +1,8 @@
-require 'environment'
-require 'csv'
-require 'concerns/csv_model'
 require 'active_model'
 require 'active_support/all'
+require 'concerns/csv_model'
+require 'csv'
+require 'environment'
 require 'models/plan'
 
 class SLCSP

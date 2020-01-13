@@ -1,5 +1,5 @@
-require 'models/slcsp'
 require 'models/plan'
+require 'models/slcsp'
 require 'models/zip'
 
 RSpec.describe SLCSP do
