@@ -13,8 +13,15 @@ class SLCSP
   attr_accessor :zipcode, :rate
 
   def rate
-    second_lowest_cost_silver_plan = Plan.with_zipcode(zipcode).silver.sorted_by_rate.second
-    second_lowest_cost_silver_plan.present? ? second_lowest_cost_silver_plan.rate : nil
+    @rate.presence || computed_rate
+  end
+
+  def computed_rate
+    unless instance_variable_defined?(:@computed_rate)
+      second_lowest_cost_silver_plan = Plan.with_zipcode(zipcode).silver.sorted_by_rate.second
+      @computed_rate = second_lowest_cost_silver_plan.present? ? second_lowest_cost_silver_plan.rate : nil
+    end
+    @computed_rate
   end
 
   def to_csv_row

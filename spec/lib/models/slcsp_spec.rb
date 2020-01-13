@@ -5,7 +5,7 @@ require 'models/zip'
 RSpec.describe SLCSP do
   describe '#rate' do
     let(:slcsp) do
-      SLCSP.new(zipcode: slcsp_zipcode, rate: '')
+      SLCSP.new(zipcode: slcsp_zipcode, rate: nil)
     end
 
     let(:zip_11111) do
