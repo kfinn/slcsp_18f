@@ -67,6 +67,11 @@ RSpec.describe SLCSP do
   end
 
   describe '#to_csv_row' do
+    before do
+      allow(Plan).to receive(:all) { [] }
+      allow(Zip).to receive(:all) { [] }
+    end
+
     context 'when rate is nil' do
       let(:slcsp) { SLCSP.new(zipcode: '33333', rate: nil) }
 
