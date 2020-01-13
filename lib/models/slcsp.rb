@@ -10,7 +10,8 @@ class SLCSP
   include CSVModel
   csv_path Environment.instance.slcsp_path
 
-  attr_accessor :zipcode, :rate
+  attr_accessor :zipcode
+  attr_writer :rate
 
   def rate
     @rate.presence || computed_rate

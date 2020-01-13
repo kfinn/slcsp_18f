@@ -8,7 +8,8 @@ RSpec.describe CSVModel do
         include ActiveModel::Model
         include CSVModel
 
-        attr_accessor :id, :state, :rate
+        attr_accessor :id, :state
+        attr_reader :rate
 
         def rate=(rate)
           @rate = rate.to_f

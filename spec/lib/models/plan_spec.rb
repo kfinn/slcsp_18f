@@ -24,7 +24,7 @@ RSpec.describe Plan do
     end
 
     before do
-      allow(Plan).to receive(:all) { [first_matching_plan, first_excluded_plan, second_excluded_plan, second_matching_plan ]}
+      allow(Plan).to receive(:all) { [first_matching_plan, first_excluded_plan, second_excluded_plan, second_matching_plan] }
       allow(Zip).to receive(:all) { [zip] }
     end
 

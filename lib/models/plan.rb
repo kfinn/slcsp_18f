@@ -48,7 +48,8 @@ class Plan
     CollectionProxy.new(all).sorted_by_rate
   end
 
-  attr_accessor :plan_id, :state, :metal_level, :rate, :rate_area
+  attr_accessor :plan_id, :state, :metal_level, :rate_area
+  attr_reader :rate
 
   def rate=(rate)
     @rate = rate.to_d

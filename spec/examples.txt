@@ -1,0 +1,9 @@
+example_id                                   | status | run_time        |
+-------------------------------------------- | ------ | --------------- |
+./spec/lib/concerns/csv_model_spec.rb[1:1:1] | passed | 0.00182 seconds |
+./spec/lib/models/plan_spec.rb[1:1:1]        | passed | 0.01212 seconds |
+./spec/lib/models/slcsp_spec.rb[1:1:1:1]     | passed | 0.00071 seconds |
+./spec/lib/models/slcsp_spec.rb[1:1:2:1]     | passed | 0.00312 seconds |
+./spec/lib/models/slcsp_spec.rb[1:2:1:1]     | passed | 1.52 seconds    |
+./spec/lib/models/zip_spec.rb[1:1:1]         | passed | 0.00136 seconds |
+./spec/lib/models/zip_spec.rb[1:1:2]         | passed | 0.00181 seconds |
